@@ -42,4 +42,22 @@
         android:id="@+id/calculate"
         android:text="예산서" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingbtn"
+        android:text="설정" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/diarybtn"
+        android:text="일기장" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/qrbtn"
+        android:text="큐알" />
+
 </LinearLayout>

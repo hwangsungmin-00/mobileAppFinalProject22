@@ -4,7 +4,10 @@ import android.app.Application
 import androidx.multidex.MultiDexApplication
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import com.kakao.sdk.common.KakaoSdk
 import com.tickaroo.tikxml.TikXml
 import com.tickaroo.tikxml.retrofit.TikXmlConverterFactory
@@ -31,8 +34,8 @@ class MyApplication:Application() {
         //로그인
         lateinit var auth: FirebaseAuth
         var email:String?=null
-        //lateinit var db : FirebaseFirestore
-        //lateinit var storage:FirebaseStorage
+        lateinit var db : FirebaseFirestore
+        lateinit var storage: FirebaseStorage
 
         fun checkAuth() : Boolean{
             var currentUser = auth.currentUser
@@ -58,8 +61,8 @@ class MyApplication:Application() {
         auth = Firebase.auth
         KakaoSdk.init(this, "9877438a9516dafd8a0556ac731ba010")
 
-        //db = FirebaseFirestore.getInstance()
-        //storage = Firebase.storage
+        db = FirebaseFirestore.getInstance()
+        storage = Firebase.storage
     }
 
 

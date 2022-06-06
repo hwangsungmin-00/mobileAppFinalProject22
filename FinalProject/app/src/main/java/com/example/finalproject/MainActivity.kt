@@ -39,6 +39,21 @@ class MainActivity : AppCompatActivity() {
             val intent2 = Intent(this, CalculateActivity::class.java)
             startActivity(intent2)
         }
+        binding.settingbtn.setOnClickListener{
+            val intent3 = Intent(this, SettingActivity::class.java)
+            startActivity(intent3)
+        }
+        binding.diarybtn.setOnClickListener{
+            val intent4 = Intent(this, DiaryActivity::class.java)
+            startActivity(intent4)
+        }
+
+        binding.qrbtn.setOnClickListener{
+            val intent5 = Intent(this, CaptureActivity::class.java)
+            startActivity(intent5)
+        }
+
+
     }
 
     override fun onStart() {
