@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent5)
         }
 
+        binding.mapbtnmain.setOnClickListener{
+            val intent5 = Intent(this, MapActivity::class.java)
+            startActivity(intent5)
+        }
+
 
     }
 

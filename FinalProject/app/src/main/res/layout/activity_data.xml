@@ -24,8 +24,8 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="XML"
-                android:id="@+id/xml"/>
+                android:text="지도"
+                android:id="@+id/mapbtn"/>
         </RadioGroup>
         <Button
             android:layout_width="wrap_content"

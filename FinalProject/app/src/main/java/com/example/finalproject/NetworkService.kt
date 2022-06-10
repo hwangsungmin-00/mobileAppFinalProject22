@@ -11,7 +11,10 @@ interface NetworkService {
         @Query("pageNo") page:Int,
         @Query("numOfRows") pageSize:Int,
         @Query("type") type:String?
+
     ) : Call<PageListModel>
+
+
 /*
     @GET("B551182/pubReliefHospService/getpubReliefHospList")
     fun getXmlList(

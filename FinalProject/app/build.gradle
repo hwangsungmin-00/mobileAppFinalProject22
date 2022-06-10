@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.tickaroo.tikxml:core:0.8.13'
     implementation 'com.tickaroo.tikxml:retrofit-converter:0.8.13'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
     kapt 'com.tickaroo.tikxml:processor:0.8.13'
 
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
@@ -68,9 +69,13 @@ dependencies {
 
     implementation 'androidx.preference:preference-ktx:1.2.0'
 
+
     // QRCODE 라이브러리
     implementation ('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    //implementation 'com.google.android.gms:play-services:12.0.1'
 
 
     testImplementation 'junit:junit:4.13.2'
