@@ -45,6 +45,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
     lateinit var providerClient: FusedLocationProviderClient
     var a: Int = 0
 
+    var latitude =10.0
+    var longitude =10.0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
@@ -79,10 +82,12 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
                         a=a+1
 
                     }
+
+                    moveMap(latitude, longitude)
                     Log.d("mobileApp", "${wtm?.get(0)?.lot} 이고")
                     Log.d("mobileApp", "${wtm?.get(1)?.lot} 이다")
                     Log.d("mobileApp", "${wtm?.get(5)?.bsn_nm} 이다")
-                    //Log.d("mobileApp", "${a}")
+                    Log.d("mobileApp", "${a}")
 
                 }
             }
@@ -144,42 +149,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
 
     override fun onMapReady(p0: GoogleMap) {
         googleMap = p0
-        //var latLng = LatLng(37.46839171, 126.6470054)
 
 
-        //googleMap?.mapType = GoogleMap.MAP_TYPE_SATELLITE
 
-        //var markerOp = MarkerOptions()
-        //Log.d("mobileApp", "랄라")
-
-
-/*
-        for (i in 0 until 30) {
-            //Log.d("mobileApp", "룰라")
-            //latLng = LatLng(lats[i].toDouble(), lngs[i].toDouble())
-            //googleMap!!.addMarker(MarkerOptions().position(latLng).title(storename[i]))
-            Log.d("mobileApp", "${lats[i]} 이고")
-            Log.d("mobileApp", "${lngs[i]} 이고다")
-            //markerOp = MarkerOptions()
-            //markerOp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
-            //markerOp.position(latLng)
-            //markerOp.title(storename[i])
-            //googleMap?.addMarker(markerOp)
-
-        }*/
-        //googleMap!!.moveCamera(CameraUpdateFactory.newLatLng(latLng))
-/*
-        val position: CameraPosition = CameraPosition.Builder()
-            .target(latLng)
-            .zoom(16f)
-            .build()
-        googleMap!!.moveCamera(CameraUpdateFactory.newCameraPosition(position))*/
-
-        //val markerOp = MarkerOptions()
-        //markerOp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
-        //markerOp.position(latLng)
-        //markerOp.title("월드컵경기장")
-        //googleMap?.addMarker(markerOp)
     }
 
 
@@ -193,6 +165,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
 
     private fun moveMap(latitide: Double, longitude: Double) {
         var latLng2 = LatLng(37.46839171, 126.6470054)
+        Log.d("mobileApp", "${a}")
         for (i in 0 until a) {
             //Log.d("mobileApp", "룰라")
             latLng2 = LatLng(lats[i].toDouble(), lngs[i].toDouble())
@@ -234,10 +207,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
                 object : OnSuccessListener<Location> {
                     override fun onSuccess(p0: Location?) {
                         p0?.let {
-                            val latitude = p0.latitude
-                            val longitude = p0.longitude
+                            latitude = p0.latitude
+                            longitude = p0.longitude
                             Log.d("mobileApp", "lat: $latitude, lng: $longitude")
-                            moveMap(latitude, longitude)
+                            //moveMap(latitude, longitude)
                         }
                     }
                 }

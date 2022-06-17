@@ -69,6 +69,8 @@ dependencies {
 
     implementation 'androidx.preference:preference-ktx:1.2.0'
 
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
 
     // QRCODE 라이브러리
     implementation ('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }

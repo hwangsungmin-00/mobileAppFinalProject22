@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
             val intent5 = Intent(this, MapActivity::class.java)
             startActivity(intent5)
         }
+        binding.youtubebtn.setOnClickListener{
+            val intent7 = Intent(this, YoutubeActivity::class.java)
+            startActivity(intent7)
+        }
 
 
     }

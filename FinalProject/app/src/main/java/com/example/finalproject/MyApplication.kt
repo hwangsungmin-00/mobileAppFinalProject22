@@ -24,12 +24,6 @@ class MyApplication:Application() {
                 .baseUrl("http://apis.data.go.kr/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-        //val parser= TikXml.Builder().exceptionOnUnreadXml(false).build()
-        //val retrofitXml : Retrofit
-        //    get() = Retrofit.Builder()
-        //        .baseUrl("http://apis.data.go.kr/")
-        //        .addConverterFactory(TikXmlConverterFactory.create(parser))
-        //        .build()
 
         //로그인
         lateinit var auth: FirebaseAuth
@@ -46,14 +40,24 @@ class MyApplication:Application() {
                 false
             }
         }
+        //유튜브
+        var networkService2 : NetworkService2
+        val retrofit2: Retrofit
+            get()=Retrofit.Builder()
+                .baseUrl("https://www.googleapis.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
 
 
 
 
         init{
             networkService = retrofit.create(NetworkService::class.java)
+            networkService2 = retrofit2.create(NetworkService2::class.java)
             //networkServiceXml = retrofitXml.create(NetworkService::class.java)
         }
+
+
     }
 
     override fun onCreate() {
