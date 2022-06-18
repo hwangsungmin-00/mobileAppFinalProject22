@@ -1,182 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/rootLayout"
+    android:id="@+id/drawer"
     tools:context=".MainActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#46d2d2"
-        android:id="@+id/linearlog"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="24dp"
-            android:textColor="@color/white"
-            android:padding="10dp"
-            android:id="@+id/authTv"
-            android:text="Login" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="로그인"
-            android:textSize="24dp"
-            android:id="@+id/btnLogin"></Button>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="75dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/userIdImg"
-                android:src="@drawable/user_basic"
-                android:scaleType="centerCrop" />
-
-        </androidx.cardview.widget.CardView>
+        android:layout_height="match_parent"
+        android:id="@+id/rootLayout"
+        android:orientation="vertical">
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <Button
-                android:layout_width="match_parent"
+            android:background="#46d2d2"
+            android:id="@+id/linearlog"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/settingbtn"
-                android:text="설정" />
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:id="@+id/authTv"
+                android:text="@string/logg" />
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="30dp"
-                    android:id="@+id/galleryByn"
-                    android:text="갤러리" />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/cameraByn"
-                    android:text="카메라" />
-            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인"
+                android:textSize="24dp"
+                android:id="@+id/btnLogin"></Button>
         </LinearLayout>
 
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/openapicome"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_weight="2"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="카드사용처"></Button>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/qrbtn"
-            android:layout_weight="2"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="잔액확인" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/calculate"
-            android:layout_weight="2"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="예산서" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/diarybtn"
-            android:layout_weight="2"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="일기장" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/mapbtnmain"
-            android:layout_weight="2"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="지도" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/youtubebtn"
-            android:layout_weight="2"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/et_link_back2"
-            android:text="유튜브" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <androidx.viewpager2.widget.ViewPager2
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/viewpager"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="75dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/userIdImg"
+                    android:src="@drawable/user_basic"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Welocome to Lithing:)" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/settingbtn"
+                    android:text="설정" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="30dp"
+                        android:id="@+id/galleryByn"
+                        android:text="갤러리" />
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/cameraByn"
+                        android:text="카메라" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/openapicome"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/et_link_back2"
+                android:drawableLeft="@drawable/c1"
+                android:textSize="20dp"
+                android:text="카드사용처"></Button>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/qrbtn"
+                android:layout_weight="2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/c2"
+                android:textSize="20dp"
+                android:background="@drawable/et_link_back2"
+                android:text="잔액확인" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/calculate"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/c3"
+                android:textSize="20dp"
+                android:background="@drawable/et_link_back2"
+                android:text="예산서" />
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/diarybtn"
+                android:layout_weight="2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/c4"
+                android:textSize="20dp"
+                android:background="@drawable/et_link_back2"
+                android:text="일기장" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/mapbtnmain"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/c5"
+                android:textSize="20dp"
+                android:background="@drawable/et_link_back2"
+                android:text="지도" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/youtubebtn"
+                android:layout_weight="2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/c6"
+                android:textSize="20dp"
+                android:background="@drawable/et_link_back2"
+                android:text="유튜브" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewpager"/>
+        </LinearLayout>
     </LinearLayout>
 
 
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/main_drawer_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu"/>
 
 
 
 
-
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

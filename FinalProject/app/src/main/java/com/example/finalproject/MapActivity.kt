@@ -56,7 +56,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
         val call: Call<PageListModel> = MyApplication.networkService.getList(
             "UZqOXy4njGcLlzRF3dc1CkzTh/6RreiyUPk+iRLTrHRIqhnXaXKcEP2PJcSRFt8/2C9oT3uBJhoVrGiCL97Img==",
             1,
-            30,
+            200,
             "JSON"
         )
 

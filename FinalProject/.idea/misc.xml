@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/et_link_back.xml" value="0.1" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/et_link_back2.xml" value="0.1" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/splash.xml" value="0.1095" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_calculate.xml" value="0.15577507598784193" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_diary.xml" value="0.17299898682877407" />
@@ -26,7 +28,9 @@
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_two.xml" value="0.34375" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/item_mainlist.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/movie_video_item.xml" value="0.17299898682877407" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/navigation_header.xml" value="0.29739583333333336" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/menu/menu_add.xml" value="0.2657407407407407" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/menu/navigation_menu.xml" value="0.1" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/xml/settings.xml" value="0.22" />
       </map>
     </option>

@@ -11,22 +11,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.finalproject.databinding.ActivityDataBinding
 import com.example.finalproject.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import com.kakao.sdk.common.util.Utility
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var intent1 : Intent
     lateinit var binding : ActivityMainBinding
 
     lateinit var sharedPreferences: SharedPreferences
     lateinit var sharedPreferences2: SharedPreferences
+
+    lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,8 +141,62 @@ class MainActivity : AppCompatActivity() {
         binding.viewpager.adapter=MyFragmentPagerAdapter(this)
 
 
+        //드로어
+        toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.drawer_open, R.string.drawer_close)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toggle.syncState()
+
+        /*binding.mainDrawerView.setNavigationItemSelectedListener {
+            Log.d("mobileApp", "${it.title}")
+
+            true
+        }*/
+
+        val navigationView: NavigationView = findViewById(R.id.main_drawer_view)
+        navigationView.setNavigationItemSelectedListener(this)
+
 
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.click1 -> {
+                val intent1 = Intent(this, DataActivity::class.java)
+                startActivity(intent1)
+            }
+            R.id.click2 -> {
+                val intent5 = Intent(this, CaptureActivity::class.java)
+                startActivity(intent5)
+            }
+            R.id.click3 -> {
+                val intent2 = Intent(this, CalculateActivity::class.java)
+                startActivity(intent2)
+            }
+            R.id.click4 -> {
+                val intent4 = Intent(this, DiaryActivity::class.java)
+                startActivity(intent4)
+            }
+            R.id.click5 -> {
+                val intent5 = Intent(this, MapActivity::class.java)
+                startActivity(intent5)
+            }
+            R.id.click6 -> {
+                val intent7 = Intent(this, YoutubeActivity::class.java)
+                startActivity(intent7)
+            }
+        }
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(toggle.onOptionsItemSelected(item)){
+
+            //return true
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
 
     override fun onResume() {
         super.onResume()

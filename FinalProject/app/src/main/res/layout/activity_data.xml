@@ -19,12 +19,12 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="JSON"
+                android:text="사용처 목록으로 확인하기"
                 android:id="@+id/json"/>
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="지도"
+                android:text="사용처 지도로 확인하기"
                 android:id="@+id/mapbtn"/>
         </RadioGroup>
         <Button
