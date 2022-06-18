@@ -1,8 +1,11 @@
 package com.example.finalproject
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
+import android.graphics.Typeface
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +13,10 @@ import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.preference.PreferenceManager
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.finalproject.databinding.ActivityDataBinding
 import com.example.finalproject.databinding.ActivityMainBinding
 import com.kakao.sdk.common.util.Utility
@@ -17,11 +24,31 @@ import com.kakao.sdk.common.util.Utility
 class MainActivity : AppCompatActivity() {
     lateinit var intent1 : Intent
     lateinit var binding : ActivityMainBinding
+
+    lateinit var sharedPreferences: SharedPreferences
+    lateinit var sharedPreferences2: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val bgColor = sharedPreferences.getString("color", "")
+        binding.rootLayout.setBackgroundColor(Color.parseColor(bgColor))
+        sharedPreferences2 = PreferenceManager.getDefaultSharedPreferences(this)
+        val textShape = sharedPreferences2.getString("textshape", "")
+        binding.openapicome.setTextColor(Color.parseColor(textShape))
+        binding.qrbtn.setTextColor(Color.parseColor(textShape))
+        binding.calculate.setTextColor(Color.parseColor(textShape))
+        binding.diarybtn.setTextColor(Color.parseColor(textShape))
+        binding.mapbtnmain.setTextColor(Color.parseColor(textShape))
+        binding.youtubebtn.setTextColor(Color.parseColor(textShape))
+
+
+
+
 
         //val keyHash = Utility.getKeyHash(this)
         //Log.d("mobileApp", keyHash)
@@ -106,6 +133,26 @@ class MainActivity : AppCompatActivity() {
             requestCameraThumnailLauncher.launch(intent)
         }
 
+        binding.viewpager.adapter=MyFragmentPagerAdapter(this)
+
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val bgColor = sharedPreferences.getString("color", "")
+        binding.rootLayout.setBackgroundColor(Color.parseColor(bgColor))
+
+        val textShape = sharedPreferences2.getString("textshape", "")
+        binding.openapicome.setTextColor(Color.parseColor(textShape))
+        binding.qrbtn.setTextColor(Color.parseColor(textShape))
+        binding.calculate.setTextColor(Color.parseColor(textShape))
+        binding.diarybtn.setTextColor(Color.parseColor(textShape))
+        binding.mapbtnmain.setTextColor(Color.parseColor(textShape))
+        binding.youtubebtn.setTextColor(Color.parseColor(textShape))
+
+
 
     }
 
@@ -155,4 +202,22 @@ class MainActivity : AppCompatActivity() {
         }
         return inSampleSize
     }
+
+    class MyFragmentPagerAdapter(activity: FragmentActivity): FragmentStateAdapter(activity)
+    {
+        val fragments: List<Fragment>
+        init{
+            fragments=listOf(TwoFragment(), OneFragment())
+
+        }
+
+        override fun getItemCount(): Int {
+            return fragments.size
+        }
+
+        override fun createFragment(position: Int): Fragment {
+            return fragments[position]
+        }
+    }
 }
+

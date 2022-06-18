@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/et_link_back2.xml" value="0.1" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/splash.xml" value="0.1095" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_calculate.xml" value="0.15577507598784193" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_diary.xml" value="0.17299898682877407" />
@@ -12,7 +13,7 @@
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_data.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_diary.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_google.xml" value="0.22146739130434784" />
-        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_map.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_setting.xml" value="0.19927536231884058" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_splash.xml" value="0.1" />
@@ -20,11 +21,13 @@
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/calculateitem.xml" value="0.65" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/diary_item_main.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_my_setting.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_one.xml" value="0.34375" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_retrofit.xml" value="0.17299898682877407" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_two.xml" value="0.34375" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/item_mainlist.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/layout/movie_video_item.xml" value="0.17299898682877407" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/menu/menu_add.xml" value="0.2657407407407407" />
-        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/xml/settings.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/FinalProject/app/src/main/res/xml/settings.xml" value="0.22" />
       </map>
     </option>
   </component>

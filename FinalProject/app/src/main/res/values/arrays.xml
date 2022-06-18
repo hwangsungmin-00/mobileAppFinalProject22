@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_color">
+        <item>연한초록</item>
+        <item>일반초록</item>
+        <item>진한초록</item>
+        <item>흰색</item>
+        <item>검정</item>
+    </string-array>
+    <string-array name="my_color_value">
+        <item>#8ee1d2</item>
+        <item>#03dac5</item>
+        <item>#018786</item>
+        <item>#ffffff</item>
+        <item>#000000</item>
+    </string-array>
+
+    <string-array name="my_text">
+        <item>검정</item>
+        <item>흰색</item>
+    </string-array>
+    <string-array name="my_text_value">
+        <item>#000000</item>
+        <item>#ffffff</item>
+    </string-array>
+
+    <string-array name="my_textt2">
+        <item>bold</item>
+        <item>italic</item>
+        <item>normal</item>
+    </string-array>
+    <string-array name="my_textt_value2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

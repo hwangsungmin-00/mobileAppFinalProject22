@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/rootLayout"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_500"
+        android:background="#46d2d2"
         android:id="@+id/linearlog"
         android:orientation="horizontal">
         <TextView
@@ -20,7 +21,7 @@
             android:textColor="@color/white"
             android:padding="10dp"
             android:id="@+id/authTv"
-            android:text="모바일앱" />
+            android:text="Login" />
 
         <Button
             android:layout_width="wrap_content"
@@ -96,6 +97,7 @@
             android:layout_height="100dp"
             android:layout_weight="2"
             android:layout_marginLeft="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="카드사용처"></Button>
         <Button
             android:layout_width="wrap_content"
@@ -104,6 +106,7 @@
             android:layout_weight="2"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="잔액확인" />
 
     </LinearLayout>
@@ -119,6 +122,7 @@
             android:id="@+id/calculate"
             android:layout_weight="2"
             android:layout_marginLeft="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="예산서" />
         <Button
             android:layout_width="wrap_content"
@@ -127,6 +131,7 @@
             android:layout_weight="2"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="일기장" />
 
     </LinearLayout>
@@ -142,6 +147,7 @@
             android:id="@+id/mapbtnmain"
             android:layout_weight="2"
             android:layout_marginLeft="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="지도" />
 
         <Button
@@ -151,7 +157,18 @@
             android:layout_weight="2"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/et_link_back2"
             android:text="유튜브" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager"/>
     </LinearLayout>
 
 
