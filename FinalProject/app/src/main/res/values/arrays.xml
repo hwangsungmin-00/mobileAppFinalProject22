@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="my_color">
-        <item>연한초록</item>
+        <item>연한하늘</item>
         <item>일반초록</item>
         <item>진한초록</item>
         <item>흰색</item>
         <item>검정</item>
     </string-array>
     <string-array name="my_color_value">
-        <item>#8ee1d2</item>
+        <item>#D9F0F2</item>
         <item>#03dac5</item>
         <item>#018786</item>
         <item>#ffffff</item>

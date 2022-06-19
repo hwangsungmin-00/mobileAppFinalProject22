@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D9F0F2"
     tools:context=".DataActivity">
 
     <LinearLayout
@@ -19,12 +20,14 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="사용처 목록으로 확인하기"
+                android:text="사용처 목록으로 보기"
+                android:textSize="30dp"
                 android:id="@+id/json"/>
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="사용처 지도로 확인하기"
+                android:text="사용처 지도로 보기"
+                android:textSize="30dp"
                 android:id="@+id/mapbtn"/>
         </RadioGroup>
         <Button

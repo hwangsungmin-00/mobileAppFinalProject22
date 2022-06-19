@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var sharedPreferences: SharedPreferences
     lateinit var sharedPreferences2: SharedPreferences
+    lateinit var sharedPreferences3: SharedPreferences
+    lateinit var sharedPreferences4: SharedPreferences
 
     lateinit var toggle: ActionBarDrawerToggle
 
@@ -51,7 +53,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.mapbtnmain.setTextColor(Color.parseColor(textShape))
         binding.youtubebtn.setTextColor(Color.parseColor(textShape))
 
-
+        sharedPreferences3 = PreferenceManager.getDefaultSharedPreferences(this)
+        val idtest = sharedPreferences3.getString("id", "")
+        binding.tt1.setText(idtest)
+        sharedPreferences4 = PreferenceManager.getDefaultSharedPreferences(this)
+        val agetest = sharedPreferences4.getString("age", "")
+        binding.tt2.setText(agetest)
 
 
 
@@ -211,6 +218,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.mapbtnmain.setTextColor(Color.parseColor(textShape))
         binding.youtubebtn.setTextColor(Color.parseColor(textShape))
 
+        val idtest = sharedPreferences3.getString("id", "")
+        binding.tt1.setText(idtest)
+
+        val agetest = sharedPreferences4.getString("age", "")
+        binding.tt2.setText(agetest)
+
 
 
     }
@@ -226,7 +239,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         else{
             binding.btnLogin.text="로그인"
-            binding.authTv.text="덕성 모바일"
+            binding.authTv.text="Login to Lithing"
             binding.authTv.textSize=24F
             //binding.mainRecyclerView.visibility = View.GONE
         }
@@ -266,7 +279,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     {
         val fragments: List<Fragment>
         init{
-            fragments=listOf(TwoFragment(), OneFragment())
+            fragments=listOf(TwoFragment(), OneFragment(), ThreeFragment())
 
         }
 

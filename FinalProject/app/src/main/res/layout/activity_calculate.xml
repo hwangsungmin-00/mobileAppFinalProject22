@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D9F0F2"
     tools:context=".CalculateActivity">
 
     <TextView
@@ -13,10 +14,12 @@
         android:layout_marginTop="30dp"
         android:textSize="40dp"
         android:textColor="@color/black"
-        android:text="예산서" />
+        android:drawableRight="@drawable/c3"
+        android:text=" 가계부" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calculate_recyclerView"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -24,7 +27,7 @@
         android:id="@+id/calculate_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+ 에산서 추가"
+        android:text="+ 가계부 추가"
         />
 
 </LinearLayout>
