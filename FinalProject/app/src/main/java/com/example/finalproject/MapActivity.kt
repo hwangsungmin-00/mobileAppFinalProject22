@@ -2,6 +2,7 @@ package com.example.finalproject
 
 import android.Manifest
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
@@ -11,9 +12,11 @@ import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.finalproject.databinding.ActivityMapBinding
+import com.example.finalproject.databinding.DialogMapBinding
 import com.example.finalproject.databinding.FragmentRetrofitBinding
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
@@ -23,10 +26,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.CameraPosition
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnSuccessListener
 import retrofit2.Call
 import retrofit2.Callback
@@ -150,7 +150,56 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
     override fun onMapReady(p0: GoogleMap) {
         googleMap = p0
 
+        val dialogBinding = DialogMapBinding.inflate(layoutInflater)
 
+        googleMap!!.setOnMarkerClickListener(object:GoogleMap.OnMarkerClickListener{
+            override fun onMarkerClick(marker: Marker): Boolean {
+
+                val eventHandler = object:DialogInterface.OnClickListener{
+                    override fun onClick(p0: DialogInterface?, p1: Int) {
+                        if(p1==DialogInterface.BUTTON_POSITIVE){
+                            marker!!.title = dialogBinding.mapTitle.text.toString()
+
+                        }
+                    }
+                }
+                AlertDialog.Builder(this@MapActivity).run{
+                    setTitle("마커 이름")
+                    if(dialogBinding.root.parent != null)
+                        (dialogBinding.root.parent as ViewGroup).removeView(dialogBinding.root)
+                    setView(dialogBinding.root)
+                    setPositiveButton("확인", eventHandler)
+                    setNegativeButton("취소", null)
+                    show()
+               }
+                return false
+            }
+        })
+        googleMap!!.setOnMapClickListener(object: GoogleMap.OnMapClickListener{
+            override fun onMapClick(latltn: LatLng) {
+                val eventHandler = object:DialogInterface.OnClickListener{
+                    override fun onClick(p0: DialogInterface?, p1: Int) {
+                        if(p1==DialogInterface.BUTTON_POSITIVE){
+                            val markerOptions = MarkerOptions()
+                            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                            markerOptions.position(latltn!!)
+                            markerOptions.title(dialogBinding.mapTitle.text.toString())
+
+                            googleMap?.addMarker(markerOptions)
+                        }
+                    }
+                }
+                AlertDialog.Builder(this@MapActivity).run{
+                    setTitle("마커 이름")
+                    if(dialogBinding.root.parent != null)
+                        (dialogBinding.root.parent as ViewGroup).removeView(dialogBinding.root)
+                    setView(dialogBinding.root)
+                    setPositiveButton("확인", eventHandler)
+                    setNegativeButton("취소", null)
+                    show()
+                }
+            }
+        })
 
     }
 
